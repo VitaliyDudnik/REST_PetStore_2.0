@@ -20,8 +20,6 @@ import java.util.Map;
 @RestControllerAdvice
 public class ExceptionController extends ResponseEntityExceptionHandler {
 
-    private IllegalArgumentException ex;
-
     @Override
     protected ResponseEntity<Object> handleMethodArgumentNotValid(MethodArgumentNotValidException ex, HttpHeaders headers, HttpStatus status, WebRequest request) {
         BindingResult bindingResult = ex.getBindingResult();
